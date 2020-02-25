@@ -75,3 +75,6 @@ Common props you may want to specify include:
 - `onChange` - Function while change the input value
 - `placeholder` - Placeholder of input field
 
+## License
+
+MIT Licensed. Copyright (c) Jed Watson 2019.
