@@ -1,9 +1,6 @@
 [![NPM](https://img.shields.io/npm/v/react-select.svg)](https://www.npmjs.com/package/react-input-textboxs)
-[![CircleCI](https://circleci.com/gh/JedWatson/react-select/tree/master.svg?style=shield)](https://circleci.com/gh/JedWatson/react-select/tree/master)
-[![Coverage Status](https://coveralls.io/repos/JedWatson/react-select/badge.svg?branch=master&service=github)](https://coveralls.io/github/JedWatson/react-select?branch=master)
-[![Supported by Thinkmill](https://thinkmill.github.io/badge/heart.svg)](http://thinkmill.com.au/?utm_source=github&utm_medium=badge&utm_campaign=react-select)
 
-# Why you  are here to use me
+# react-input-textboxs
 
 This *(react-input-textboxs)* is a JavaScript library for React Applicaiton.
 
@@ -19,15 +16,18 @@ The react package contains form input box with variety of styles.
 
 # Import in your project file
 
-```import {FloatingLabel,TextBox} from 'react-input-textboxs'```
+```import {FloatingLabel,TextBox,Select} from 'react-input-textboxs'```
 
 
 # Declare inside the render menthod
+# Input Field
 
 ```
 this.state ={
     name="Siva",
-    password:"Shiva@123"
+    password:"Shiva@123",
+    selectvalue: [],
+    selectvalue2:""
 }
 
 handleChange(value,key){
@@ -63,7 +63,21 @@ handleChange(value,key){
     placeholder={"Enter your Name"}
     onChange={(value)=>this.handleChange(value,'name')} />
 ```
-
+# Select
+```
+<Select
+    value={this.state.selectvalue}
+    onChange={(value) => this.handleChange(value, 'selectvalue')}
+    multiple
+    label="Select from list...."
+    options={["siva","prakash","Manisha","Srinivasan"]} />
+        
+<Select
+    value={this.state.selectvalue2}
+    onChange={(value) => this.handleChange(value, 'selectvalue2')}
+    label="Select from list...."
+    options={["siva","prakash","Manisha","Srinivasan"]} />
+```
 ## Props
 
 Common props you may want to specify include:
