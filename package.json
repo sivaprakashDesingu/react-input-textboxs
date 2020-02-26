@@ -1,9 +1,18 @@
 {
     "name": "react-input-textboxs",
-    "version": "1.2.7",
+    "version": "1.2.8",
     "description": "This (react-input-textboxs) is a JavaScript library for React Applicaiton with variety of Input box styles",
     "main": "./build/index.js",
     "license": "MIT",
+    "keywords": [
+        "react",
+        "FormInputs"
+    ],
+    "homepage": "https://www.npmjs.com/package/react-input-textboxs",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/sivaprakashDesingu/react-input-textboxs.git"
+    },
     "scripts": {
         "start": "react-scripts start",
         "build": "webpack"
