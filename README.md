@@ -109,4 +109,4 @@ Common props you may want to specify include:
 
 ## License
 
-MIT Licensed. Copyright (c) Jed Watson 2019.
+MIT Licensed. Copyright (c) Sivaprakash Desingu 2019.
