@@ -23,11 +23,11 @@ The react package contains form input box with variety of styles.
 # Input Field
 
 ```
-this.state ={
-    name="Siva",
-    password:"Shiva@123",
-    selectvalue: [],
-    selectvalue2:""
+this.state = {
+    name : "Siva",
+    password : "Shiva@123",
+    selectvalue : [],
+    selectvalue2 : ""
 }
 
 handleChange(value,key){
@@ -75,6 +75,24 @@ handleChange(value,key){
 <Select
     value={this.state.selectvalue2}
     onChange={(value) => this.handleChange(value, 'selectvalue2')}
+    label="Select from list...."
+    options={["siva","prakash","Manisha","Srinivasan"]} />
+```
+
+# Select with Filter
+```
+<Select
+    value={this.state.selectvalue}
+    onChange={(value) => this.handleChange(value, 'selectvalue')}
+    multiple
+    filter
+    label="Select from list...."
+    options={["siva","prakash","Manisha","Srinivasan"]} />
+        
+<Select
+    value={this.state.selectvalue2}
+    onChange={(value) => this.handleChange(value, 'selectvalue2')}
+    filter
     label="Select from list...."
     options={["siva","prakash","Manisha","Srinivasan"]} />
 ```
