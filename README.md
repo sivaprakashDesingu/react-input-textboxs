@@ -8,6 +8,13 @@ The react package contains form input box with variety of styles.
 
 *Example:*  FloatingLabel,FloatingLable with outline border etc..
 
+#Demo page
+
+Check the [Demo](https://codesandbox.io/s/react-input-text-boxsdemo-1r3pp)
+
+#Documendation 
+
+checkout the [Docs](https://medium.com/@opensourcesivaprakash/react-library-for-input-box-1e1b28c71151)
 
 # Installation
 
