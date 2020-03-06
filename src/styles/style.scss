@@ -5,7 +5,7 @@
   * {
     padding: 0;
     margin: 0;
-    color:#000;
+    color: #000;
     outline: 0;
     box-sizing: border-box;
     font-family: "Roboto", "arial";
@@ -122,20 +122,20 @@
     padding: 0;
     margin: 0;
     outline: 0;
-    color:#000;
+    color: #000;
     box-sizing: border-box;
     font-family: "Roboto", "arial";
     font-size: 14px;
   }
-  &.filter-select{
-    .no-multi{
+  &.filter-select {
+    .no-multi {
       position: absolute;
       width: 100%;
       bottom: 3px;
     }
   }
   input {
-    border:0;
+    border: 0;
     padding: 0 0 10px;
     border-bottom: 1px solid #ddd;
     width: 100%;
@@ -145,26 +145,26 @@
       margin: -20px 0 0;
       display: block;
     }
-    .no-multi{
+    .no-multi {
       position: absolute;
-      width:100%;
+      width: 100%;
       bottom: 3px;
     }
-    .no-multi ~ input{
-        margin:0;
+    .no-multi ~ input {
+      margin: 0;
     }
   }
   .value-wrapper {
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
 
     .value-item {
       &.single-valued {
         background: #fff;
         padding: 10px 0 0;
-        display:flex;
+        display: flex;
         justify-content: space-between;
-        flex:1;
+        flex: 1;
       }
       padding: 8px 35px 8px 20px;
       background: #bbb7b7;
@@ -178,18 +178,38 @@
       animation-duration: 0.3s;
       .close-icon {
         position: absolute;
-        right: 15px;
+        right: 5px;
         font-size: 14px;
         cursor: pointer;
+        width: 12px;
+        height: 12px;
+      }
+      .close-icon:after,
+      .close-icon:before {
+        content: "";
+        display: flex;
+        position: relative;
+        left: 0px;
+        content: " ";
+        height: 15px;
+        width: 2px;
+        background-color: #000;
+        transform: rotate(-45deg);
+        top: -13px;
+      }
+      .close-icon:before {
+        left: 0px;
+        top: 2px;
+        transform: rotate(45deg);
       }
     }
-    .value-item:hover{
+    .value-item:hover {
       background: #0993ff;
       color: #fff;
     }
-    .value-item.single-valued:hover{
+    .value-item.single-valued:hover {
       background: #fff;
-      color:#000;
+      color: #000;
     }
   }
   .option-wrapper {
@@ -216,10 +236,10 @@
     -o-transition: 350ms;
     transition: 350ms;
     .value-item {
-      &:hover{
-        background:#f1eaea;
+      &:hover {
+        background: #f1eaea;
       }
-      display:flex;
+      display: flex;
       padding: 10px 20px;
       text-transform: capitalize;
       position: relative;

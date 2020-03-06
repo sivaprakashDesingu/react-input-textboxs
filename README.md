@@ -10,7 +10,7 @@ The react package contains form input box with variety of styles.
 
 # Demo
 
-Check the [Demo](https://codesandbox.io/s/react-input-text-boxsdemo-1r3pp)
+Checkout the [Demo](https://codesandbox.io/s/react-input-text-boxsdemo-1r3pp)
 
 # Documendation 
 
@@ -116,4 +116,4 @@ Common props you may want to specify include:
 
 ## License
 
-MIT Licensed. Copyright (c) Sivaprakash Desingu 2019.
+MIT Licensed.

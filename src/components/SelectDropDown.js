@@ -40,7 +40,8 @@ class Select extends React.Component {
                 return (
                     <li key={i} className="value-item">
                         <span>{data}</span>
-                        <span onClick={() => this.handleArrayRemoveItem(i, value)} className="close-icon">X</span>
+                        <span onClick={() => this.handleArrayRemoveItem(i, value)} 
+                        className="close-icon" aria-label="close-icon"></span>
                     </li>
                 );
             } else if (data.trim().length > 1) {
