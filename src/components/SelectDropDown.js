@@ -48,13 +48,11 @@ class Select extends React.Component {
                 return (
                     <li
                         key={i}
-                        /*onClick={() => this.resetValue()}*/
+                        onClick={() => this.handledropDown(true)}
                         className="value-item single-valued"
                     >
                         <span>{data}</span>
-                        <span onClick={() => this.resetValue()} className="close-icon">
-                            X
-            </span>
+                        <span onClick={() => this.resetValue()} aria-label="close-icon" className="close-icon"></span>
                     </li>
                 );
             }
