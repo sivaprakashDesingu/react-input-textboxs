@@ -34,30 +34,59 @@ class Select extends React.Component {
     }
 
     renderValues(value) {
-        const { multiple } = this.props;
+        const { multiple, maxResultCount } = this.props;
         return value.map((data, i) => {
-            if (multiple) {
+          if (multiple) {
+            if (maxResultCount !== undefined && maxResultCount !== 0) {
+              if (i < maxResultCount) {
                 return (
-                    <li key={i} className="value-item">
-                        <span>{data}</span>
-                        <span onClick={() => this.handleArrayRemoveItem(i, value)} 
-                        className="close-icon" aria-label="close-icon"></span>
-                    </li>
+                  <li key={i} className="value-item">
+                    <span>{data}</span>
+                    <span
+                      onClick={() => this.handleArrayRemoveItem(i, value)}
+                      className="close-icon"
+                      aria-label="close-icon"
+                    />
+                  </li>
                 );
-            } else if (data.trim().length > 1) {
+              } else if (i === maxResultCount) {
                 return (
-                    <li
-                        key={i}
-                        onClick={() => this.handledropDown(true)}
-                        className="value-item single-valued"
-                    >
-                        <span>{data}</span>
-                        <span onClick={() => this.resetValue()} aria-label="close-icon" className="close-icon"></span>
-                    </li>
+                  <li key={i} className="value-item">
+                    <span>{`+ ${value.length - maxResultCount}`}</span>
+                  </li>
                 );
+              }
+              return null;
+            } else {
+              return (
+                <li key={i} className="value-item">
+                  <span>{data}</span>
+                  <span
+                    onClick={() => this.handleArrayRemoveItem(i, value)}
+                    className="close-icon"
+                    aria-label="close-icon"
+                  />
+                </li>
+              );
             }
+          } else if (data.trim().length > 1) {
+            return (
+              <li
+                key={i}
+                onClick={() => this.handledropDown(true)}
+                className="value-item single-valued"
+              >
+                <span>{data}</span>
+                <span
+                  onClick={() => this.resetValue()}
+                  aria-label="close-icon"
+                  className="close-icon"
+                />
+              </li>
+            );
+          }
         });
-    }
+      }
 
     renderOptions(value, option, filterValue) {
         let notfound = 0;

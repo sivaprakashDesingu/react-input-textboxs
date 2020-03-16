@@ -103,6 +103,18 @@ handleChange(value,key){
     label="Select from list...."
     options={["siva","prakash","Manisha","Srinivasan"]} />
 ```
+
+# Select with MaxResultCount
+```
+<Select
+          value={this.state.selectvalue2}
+          multiple
+          maxResultCount={2}
+          onChange={value => this.handleChange(value, "selectvalue2")}
+          label="Select from list...."
+          options={["siva", "prakash", "Manisha", "Srinivasan"]}
+/>
+```
 ## Props
 
 Common props you may want to specify include:
