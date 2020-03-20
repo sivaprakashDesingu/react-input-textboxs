@@ -24,19 +24,27 @@ class FloatingLabel extends React.Component {
     }
 
     handleFloatingLabel(value) {
-        if (value.trim().length >= 1) {
-            this.setState({ floatingEnabled: true })
+        if (!this.props.type.toUpperCase() === "NUMBER") {
+            if (value.trim().length >= 1) {
+                this.setState({ floatingEnabled: true });
+            } else {
+                this.setState({ floatingEnabled: false });
+            }
         } else {
-            this.setState({ floatingEnabled: false })
+            if (value !== "") {
+                this.setState({ floatingEnabled: true });
+            } else {
+                this.setState({ floatingEnabled: false });
+            }
         }
     }
-    
-    componentDidMount(){
+
+    componentDidMount() {
         this.handleFloatingLabel(this.props.value)
     }
     render() {
         const { floatingEnabled } = this.state
-        const { label, value, type,variant,readOnly } = this.props
+        const { label, value, type, variant, readOnly } = this.props
         return (
             <div className={`react-input-texboxs-wrapper ${variant}`}>
                 <div className={`input-floating-wrapper  ${floatingEnabled ? ' enabled' : ''}`}>
