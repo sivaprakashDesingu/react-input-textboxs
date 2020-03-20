@@ -69,14 +69,14 @@
         border: 1px solid $active-blue-color;
       }
       input:focus ~ label {
-        top: -8px;
+        top: -9px;
         font-size: 13px;
         color: $active-blue-color;
         padding: 2px 5px;
         background: $white-color;
       }
       &.enabled label {
-        top: -8px;
+        top: -9px;
         font-size: 13px;
         color: $active-blue-color;
         padding: 2px 5px;
