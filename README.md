@@ -71,6 +71,9 @@ handleChange(value,key){
     onChange={(value)=>this.handleChange(value,'name')} />
 ```
 # Select
+
+Select is one of the input fileds which take no of input and makes user to select from the dropdown. User cann select eigher one or more then one. For single value select value should be string and for multi select value should be arrray also should pass multiple parameter while calling.
+
 ```
 <Select
     value={this.state.selectvalue}
